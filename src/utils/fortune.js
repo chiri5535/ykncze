@@ -70,5 +70,14 @@ const zodiacFortunes = {
     score: 4,
     advice: '毎日の小さな整えが未来を変える。',
     luckyItem: '機能的な卓上ポーチ'
-  }
+ }
+};
+
+export const getFortune = (zodiacName) => {
+  return zodiacFortunes[zodiacName] || {
+    text: '星座が不明です。',
+    score: 0,
+    advice: '正しい誕生日を入力してください。',
+    luckyItem: '不明'
+  };
 };
